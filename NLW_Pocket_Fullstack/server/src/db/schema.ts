@@ -9,8 +9,6 @@ export const goals = pgTable("goals", {
 	desiredWeeklyFrequency: integer("desired_weekly_frequency").notNull(),
 	createdAt: timestamp("created_at", { withTimezone: true })
 		.notNull()
-		// ao ser cadastrado uma nova meta, o campo
-		// created_at será preenchido automaticamente com a data atual
 		.defaultNow(),
 });
 

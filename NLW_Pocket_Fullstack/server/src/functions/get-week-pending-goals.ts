@@ -1,10 +1,7 @@
 import dayjs from "dayjs";
-import weekOfYear from "dayjs/plugin/weekOfYear";
 import { db } from "../db";
 import { goalCompletions, goals } from "../db/schema";
-import { and, count, gte, lte, sql } from "drizzle-orm";
-
-dayjs.extend(weekOfYear);
+import { and, count, eq, gte, lte, sql } from "drizzle-orm";
 
 export async function getWeekPendingGoals() {
 	// Implement this function to fetch and return the week's pending goals
@@ -32,7 +29,8 @@ export async function getWeekPendingGoals() {
 		db
 			.select({
 				goalId: goalCompletions.goalId,
-				completionCount: count(goalCompletions.id), // calculo de quantas vezes aquela meta foi concluída
+				// calculo de quantas vezes aquela meta foi concluída
+				completionCount: count(goalCompletions.id).as("completionCount"),
 			})
 			.from(goalCompletions)
 			.where(
@@ -47,10 +45,21 @@ export async function getWeekPendingGoals() {
 	// criando uma querie que vai utilizar as duas CTEs criadas anterioremente
 	const pendingGoals = await db
 		.with(goalsCreatedUpToWeek, goalCompletionCounts)
-		.select()
-		.from(goalsCreatedUpToWeek);
+		.select({
+			id: goalsCreatedUpToWeek.id,
+			title: goalsCreatedUpToWeek.title,
+			desiredWeeklyFrequency: goalsCreatedUpToWeek.desiredWeeklyFrequency,
+			// o COALESCE dentro do sql, permite realizar um if, caso a varíavel
+			// não exista ou seja NULL, será devolvido um valor default
+			completionCount: sql /*sql*/`
+				COALESCE(${goalCompletionCounts.completionCount}, 0)
+			`.mapWith(Number),
+		})
+		.from(goalsCreatedUpToWeek)
+		.leftJoin(
+			goalCompletionCounts,
+			eq(goalCompletionCounts.goalId, goalsCreatedUpToWeek.id),
+		);
 
-	return {
-		pendingGoals: pendingGoals,
-	};
+	return { pendingGoals };
 }

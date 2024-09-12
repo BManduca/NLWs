@@ -115,3 +115,8 @@
 
 ## [WITH Queries (Common Table Expressions)](https://www.postgresql.org/docs/current/queries-with.html)
 - o WITH fornece uma maneira de escrever instruções auxiliares para uso em uma consulta maior. Essas instruções, que geralmente são chamadas de Common Table Expressions ou CTEs, podem ser consideradas como "definindo tabelas temporárias que existem apenas para uma consulta". Cada instrução auxiliar em uma cláusula WITH pode ser um SELECT, INSERT, UPDATE ou DELETE, e a própria cláusula WITH é anexada a uma instrução primária que pode ser um SELECT, INSERT, UPDATE, DELETE ou MERGE.
+
+## Agregação SQL
+- Basicamente o fato de realizar uma agregação em si, é ter o poder de pegar uma lista e tranformar a mesma em uma estrutura de dados, através do SQL
+- No postgres, podemos realizar este fato, através da função, JSON_AGG()
+- 
