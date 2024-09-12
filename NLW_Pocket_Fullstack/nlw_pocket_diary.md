@@ -84,3 +84,34 @@
 ## Zod
 - Biblioteca para validação de dados
 - npm i zod
+
+## Gerando migrations
+- Para gerar as migrations do projeto, foi criado um arquivo schema.ts dentro da pasta src/db
+- Foi definido neste arquivo, todas as informações e o nome da tabela
+- Ao realizarmos o seguinte comando: npx drizzle-kit generate, será gerado um arquivo .sql que terá as intruções para criar a tabela no banco de dados, porém, a tabela ainda não foi criada e sim somente a migration.
+
+## 'Rodando' a migration
+- para se conectar com banco de dados postgres, precisamos ter instalado uma determinada biblioteca e para conseguirmos efetuar essa conexão, estaremos instalando o driver do postgres, da seguinte forma: npm i postgres
+- Basta executar o seguinte código(após a instalação do driver): npx drizzle-kit migrate
+- para visualizar a tabela, basta digitar no terminal: npx drizzle-kit studio e acessar o link gerado
+
+## Algoritmo [CUID2](https://www.npmjs.com/package/@paralleldrive/cuid2)
+- Algoritmo de geração de ID único
+- instalação: npm i @paralleldrive/cuid2
+
+## Trabalhando com Datas em JS
+- instalação: npm i dayjs
+
+## Rotas do Projeto
+- Rota para cadastrar metas
+- Rota para marcar uma meta como concluída
+- Rota que retorne os dados da minha semana (resumo da semana)
+- Rota para indicar as metas, tanto as concluídas quanto as que ainda não foram concluídas
+
+## [Fastify Type Provider Zod](https://github.com/turkerdev/fastify-type-provider-zod)
+- Plugin do Fastify
+- Automatiza a validação das rotas existentes no projeto
+- instalação: npm i fastify-type-provider-zod
+
+## [WITH Queries (Common Table Expressions)](https://www.postgresql.org/docs/current/queries-with.html)
+- o WITH fornece uma maneira de escrever instruções auxiliares para uso em uma consulta maior. Essas instruções, que geralmente são chamadas de Common Table Expressions ou CTEs, podem ser consideradas como "definindo tabelas temporárias que existem apenas para uma consulta". Cada instrução auxiliar em uma cláusula WITH pode ser um SELECT, INSERT, UPDATE ou DELETE, e a própria cláusula WITH é anexada a uma instrução primária que pode ser um SELECT, INSERT, UPDATE, DELETE ou MERGE.
