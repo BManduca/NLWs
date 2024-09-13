@@ -119,4 +119,6 @@
 ## Agregação SQL
 - Basicamente o fato de realizar uma agregação em si, é ter o poder de pegar uma lista e tranformar a mesma em uma estrutura de dados, através do SQL
 - No postgres, podemos realizar este fato, através da função, JSON_AGG()
-- 
+
+## @fastify/cors
+- Cors: método de segurança, que basicamente é uma forma de evitar que o backend seja acessível por qualquer front-end
