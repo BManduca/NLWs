@@ -1,4 +1,7 @@
 # Diário de anotações do Projeto on.orbit
+<br>
+
+# Back-end
 
 ## Node
 - [Instalação](https://medium.com/@ayseleynavuz/how-to-install-node-js-on-mac-48c641a1437d):
@@ -122,3 +125,37 @@
 
 ## @fastify/cors
 - Cors: método de segurança, que basicamente é uma forma de evitar que o backend seja acessível por qualquer front-end
+
+<br>
+<br>
+
+# Front-end
+
+## Vite
+- Vite é uma palavra francesa para 'rápido', pronunciada como veet ou vit
+- É uma ferramenta de construção de projetos de frontend que se destina oferecer uma experiência de desenvolvimento mais rápida e leve para projetos web modernos. Ela consiste em duas partes principais:
+  - Um servidor de desenvolvimento que oferece uma [rica melhoria de funcionalidades](https://pt.vitejs.dev/guide/features) sobre [módulos de ECMAScript nativo](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Guide/Modules), como por exemplo [Substituição de Módulos Instantânea](https://pt.vitejs.dev/guide/features#hot-module-replacement)
+  - Um 'build command' que empacota nosso código com a [Rollup](https://rollupjs.org/), pré-configurado para produzir ativos estáticos altamente otimizados para produção.
+
+## Tailwind CSS
+- Uma biblioteca 'utility classes'
+  - Cada classe que é aplicado em um elemento, aplica um css diferente
+- Bem sólida no mercado 
+- Vantagens do Tailwind, ao se conectar com os frameworks que temos atualmente(as bibliotecas de criação de interface), como React, Vue...
+  - Essas bibliotecas já tem um padrão de componentização, ou seja, dividir nossa aplicação em vários componentes menores.
+  - Isso se resume a menos código em tela, menos html e consequentemente menos classes, resultando assim na ação de não causar um efeito muito negativo de forma visual, no momento que estamos vendo o código.
+  - Theme-first-api
+    - O que isso quer dizer?
+      - Que no caso, você não deveria sair utilizando qualquer valor para tamanho de fonte, para espaçamento, para arredondamento de borda, ou seja, você vai configurar o seu tema, quais seriam os padrões que o seu projeto vai seguir.
+  - Manutenção local
+    - Todos os elementos do HTML, eles tem o seu css 'zerado' apartir do momento que instalamos o tailwind, por isso precisamos aplicar a cada elemento exclusivamente as classes que vão estilizar aquele elemento.
+- Instalação: 
+  - Instalando o tailwind, o postcss e o autoprefixer: 
+    - npm install -D tailwindcss postcss autoprefixer
+  - Criando o arquivo de configuração do Tailwind
+    - npx tailwindcss init -p
+
+## Biblioteca lucid-react
+- Biblioteca para ícones
+- instalação: npm i lucide-react
+
