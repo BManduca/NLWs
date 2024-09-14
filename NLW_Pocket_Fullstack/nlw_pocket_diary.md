@@ -155,7 +155,14 @@
   - Criando o arquivo de configuração do Tailwind
     - npx tailwindcss init -p
 
+## Tailwind Merge
+- Permite que seja feito a união de classes tailwind 
+
+## Tailwind Variants
+- Permite por exemplo, um dos buttons da aplicação tenha diferentes cores e tamanhos baseado em atributos que são passados para o mesm, ou seja, para relação de tamanho do button, se passarmos a propriedade small, ele terá uma configuração, senão, ele terá a config default.
+
 ## Biblioteca lucid-react
 - Biblioteca para ícones
 - instalação: npm i lucide-react
 
+[01:04:00]
