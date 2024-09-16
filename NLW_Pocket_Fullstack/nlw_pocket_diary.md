@@ -169,3 +169,23 @@
 - Uma 'component library' de código aberto otimizada para desenvolvimento rápido, de fácil manutenção e acessibilidade. Basta importar e pronto - sem necessidade de configuração.
 - Essa lib traz comportamentos comuns presente na web, em formato de components no react.
 - São 100% acessíveis, ou seja, o component em si ele 'passa' a ser interpretado como um component nativo para o leitor de tela.
+
+## Hooks
+- São funções do React que nos permitirão conectar(anexar ou anexar uma funcionalidade ao componente) ao estado e ao ciclo de vida da aplicação(entre outras funcionalidades). Eles foram criados especificamente para componentes funcionais.
+- Conceitos importantes:
+  - Estados: São varíaveis que armazenam e alteram informações sobre um componente
+  - Ciclo de vida: Refere-se a funções executadas em momentos diferentes e que realizam ações diferentes.
+- Os hooks surgiram na versão 16.6 do React e já estáveis na versão 16.8.0, resolvendo problemas como:
+  - Reutilização de código entre componentes
+  - Comprimento dos componentes, tornando-se algo muito complexo de entender.
+  - Otimizar o uso do this.
+
+## TanStack Query
+- Biblioteca focada em fetch de dados
+- Anteriormente conhecida como React Query
+- Frequentemente descrita como a biblioteca que faltava para aplicativos web, mas em ermos mais técnicos, ela facilita a busca, o armazenamento em cache, a sincronização e a atualização do estado do servidor em seus aplicativos web.
+- instalação: npm i @tanstack/react-query
+
+## SWR Vercel
+- O Nome SWR é derivado de 'stale-while-revalidate'
+- Uma técnica de invalidação de cache de HTTP popularizada pela [HTTP RFC 5861](https://datatracker.ietf.org/doc/html/rfc5861). SWR é a estratégia de primeiro retornar os dados do cache(state), depois enviar a solicitação de fetch(revalidate) e finalmente retornar com os dados atualizados.
