@@ -186,8 +186,9 @@
 - Frequentemente descrita como a biblioteca que faltava para aplicativos web, mas em ermos mais técnicos, ela facilita a busca, o armazenamento em cache, a sincronização e a atualização do estado do servidor em seus aplicativos web.
 - instalação: npm i @tanstack/react-query
 
+- ## Function invalidateQueries (queryClient => TanStack Query)
+- Toda vez que é feito uma invalidação de uma query, passando o ID dela, essa query, por debaixo dos panos, é feita de novo, ou seja, no nosso caso, será feita uma query, para completar a 'goal' e outra pra trazer o summary atualizado.
+
 ## SWR Vercel
 - O Nome SWR é derivado de 'stale-while-revalidate'
 - Uma técnica de invalidação de cache de HTTP popularizada pela [HTTP RFC 5861](https://datatracker.ietf.org/doc/html/rfc5861). SWR é a estratégia de primeiro retornar os dados do cache(state), depois enviar a solicitação de fetch(revalidate) e finalmente retornar com os dados atualizados.
-
-[40:00]

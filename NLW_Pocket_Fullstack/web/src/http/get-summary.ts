@@ -18,7 +18,7 @@ type SummaryFormatResponse = {
 */
 
 export async function getSummary(): Promise<SummaryFormatResponse> {
-	const response = await fetch("http://127.0.0.1:3333/summary");
+	const response = await fetch("http://localhost:3333/summary");
 	const data = await response.json();
 	return data.summary;
 }
