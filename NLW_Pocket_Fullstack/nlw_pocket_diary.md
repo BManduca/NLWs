@@ -189,3 +189,5 @@
 ## SWR Vercel
 - O Nome SWR é derivado de 'stale-while-revalidate'
 - Uma técnica de invalidação de cache de HTTP popularizada pela [HTTP RFC 5861](https://datatracker.ietf.org/doc/html/rfc5861). SWR é a estratégia de primeiro retornar os dados do cache(state), depois enviar a solicitação de fetch(revalidate) e finalmente retornar com os dados atualizados.
+
+[40:00]
