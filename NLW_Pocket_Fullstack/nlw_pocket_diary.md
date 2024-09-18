@@ -192,3 +192,10 @@
 ## SWR Vercel
 - O Nome SWR é derivado de 'stale-while-revalidate'
 - Uma técnica de invalidação de cache de HTTP popularizada pela [HTTP RFC 5861](https://datatracker.ietf.org/doc/html/rfc5861). SWR é a estratégia de primeiro retornar os dados do cache(state), depois enviar a solicitação de fetch(revalidate) e finalmente retornar com os dados atualizados.
+
+## React-hook-form
+- Com o React Hook Form, basicamente você registra os campos do seu formulário usando a função register, que basicamente associa um campo de entrada HTML a um estado interno da biblioteca. Isso permite que o React Hook Form gerencie o estado do formulário, sem a necessidade de criar estados separados para cada campo.
+- Reduz a quantidade de código que você precisa escrever e remove renderizações desnecessárias.
+
+- ## @hookform/resolvers
+- Biblioteca auxiliar para o React Hook Form, que é a bibliteca de integração com as bibliotecas de validação (zod)
